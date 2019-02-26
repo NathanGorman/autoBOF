@@ -1,0 +1,24 @@
+# autoBOF
+# Nathan Gorman's automated buffer overflow project
+
+Files:
+
+restart.py - this is the script that manages the debugger. It mainly serves to restart the debugger at appropriate times and dump information about the program.
+autoBOF.py - Where the magic happens. Currently fuzzes the service and overwrites the EIP. Takes one input variable, the maximum amount of data that will be sent to the target (int).
+
+
+This is a project that attempts to automate OSCP-style buffer overflows. 
+Currently it is stage 3 of 7 before it can be considered a prototype.
+
+1. Fuzz and crash service [X]
+2. Overwrite EIP [X]
+3. Control EIP [X]
+4. Determine valid characters []
+5. Code execution []
+6. Generate and send Shellcode []
+7. Catch Shell []
+
+At this point it will be a complete proof of concept. The following are the most important stretch goals for this project:
+
+1. Custom service input [] (Right now it only works with one testing service)
+2. Exploit saving/loading []
