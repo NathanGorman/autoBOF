@@ -4,6 +4,7 @@
 Files:
 
 restart.py - this is the script that manages the debugger. It mainly serves to restart the debugger at appropriate times and dump information about the program.
+
 autoBOF.py - Where the magic happens. Currently fuzzes the service and overwrites the EIP. Takes one input variable, the maximum amount of data that will be sent to the target (int).
 
 
