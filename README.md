@@ -17,8 +17,3 @@ Currently it is stage 3 of 7 before it can be considered a prototype.
 5. Code execution []
 6. Generate and send Shellcode []
 7. Catch Shell []
-
-At this point it will be a complete proof of concept. The following are the most important stretch goals for this project:
-
-1. Custom service input [] (Right now it only works with one testing service)
-2. Exploit saving/loading []
