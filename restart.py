@@ -4,6 +4,8 @@ import gdb
 import os
 os.system("echo resetFile > eip.txt")
 number_restarts = 100
+gdb.execute("set pagination off")
+os.system("/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-bin_tools-0.1.4/bin/msfelfscan -j esp ./crossfire > jmpSearch.txt")
 def on_stop(sig):
   global number_restarts
   if isinstance(sig, gdb.SignalEvent): #and (sig.stop_signal != "SIGSEGV"):
@@ -15,7 +17,11 @@ def on_stop(sig):
       gdb.execute("set logging overwrite on")
       gdb.execute("info registers eip")
       gdb.execute("set logging off") #CAN LOG THE DUMP TO NEW FILE BY CHANGING LOG FILE AND USING DIFFERENT COMMAND
+      gdb.execute("set logging file badchars.txt")
+      gdb.execute("set logging on")
+      gdb.execute("x/500xw $esp")
       gdb.execute("set logging overwrite off")
+      gdb.execute("set logging off")
       gdb.execute("kill")
       gdb.execute("run")
 gdb.events.stop.connect (on_stop)
