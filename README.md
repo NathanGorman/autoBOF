@@ -7,6 +7,8 @@ restart.py - this is the script that manages the debugger. It mainly serves to r
 
 autoBOF.py - Where the magic happens. Currently fuzzes the service and overwrites the EIP. Takes one input variable, the maximum amount of data that will be sent to the target (int).
 
+autoBOFConfig.txt - sample configuration file for usage with autoBOF.py
+
 
 This is a project that attempts to automate OSCP-style buffer overflows. 
 Currently it has achieved all of the minimum requirements to be considered a prototype
@@ -19,4 +21,9 @@ Currently it has achieved all of the minimum requirements to be considered a pro
 6. Generate and send Shellcode [X]
 7. Catch Shell [X]
 
-The final stages of this project as it nears completion will involve a large influx of user control over the overflow testing process, as well as a handful of quality of life improvements. This includes the ability to save a standalone exploit for later use, as well as the ability to specify the initial buffer content in order to make this tool less theoretical and more practical
+Additionally, this project has achieved the following post-protoype stretch goals:
+
+1. User-customizable input flags [x]
+2. minimization of static variables to maximize functionality against a wide variety of targets [x]
+3. Generation of standalone exploit [x]
+
