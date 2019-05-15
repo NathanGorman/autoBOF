@@ -1,7 +1,9 @@
 # autoBOF
 # Nathan Gorman's automated buffer overflow project
 
-Files:
+autoBOF is a project that can search for and create traditional buffer overflow exploits given certain starting parameters. It is currently only capable of running in local laboratory environments on Linux, where a vulnerable service is managed by gdb debugger and the supplied python script. However, I believe with some modification it could without much difficulty be made functional on Windows devices as well, so long as a python script that interfaces with ImmunityDB is made to mirror my restart.py.
+
+#Files:
 
 restart.py - this is the script that manages the debugger. It mainly serves to restart the debugger at appropriate times and dump information about the program.
 
